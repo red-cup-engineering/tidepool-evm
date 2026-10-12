@@ -1,0 +1,40 @@
+{
+  "name": "@red-cup-engineering/tidepool-evm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tidepool L3 contracts (Foundry): pool, membership, withdrawal, settlement and treasury over signstuff-evm cells and the shared ethereum-engineering contracts.",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./terms": "./scripts/lib/tidepool-terms.mjs",
+    "./relay-envelope": "./scripts/lib/relay-envelope.mjs",
+    "./vectors/tidepool-terms.json": "./test/vectors/js/tidepool-terms.json",
+    "./vectors/tidepool-vocab.json": "./test/vectors/js/tidepool-vocab.json",
+    "./vectors/hive-release-payload.json": "./test/vectors/js/hive-release-payload.json",
+    "./vectors/relay-envelope.json": "./test/vectors/js/relay-envelope.json"
+  },
+  "scripts": {
+    "build": "forge build --jobs 2",
+    "test": "node --test && forge test --jobs 2",
+    "vectors": "node scripts/emit-tidepool-vectors.mjs",
+    "vectors:check": "node scripts/emit-tidepool-vectors.mjs --check",
+    "vectors:lean": "node scripts/sync-lean-vectors.mjs",
+    "vectors:lean:check": "node scripts/sync-lean-vectors.mjs --check"
+  },
+  "dependencies": {
+    "@red-cup-engineering/signstuff-evm": "workspace:*",
+    "@red-cup-engineering/ethereum-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/cross-chain-services-section": "workspace:*"
+  },
+  "devDependencies": {
+    "@account-abstraction/contracts": "0.8.0",
+    "@foundry-rs/forge": "1.7.1",
+    "@openzeppelin/contracts": "5.6.1",
+    "forge-std": "github:foundry-rs/forge-std#v1.10.0",
+    "viem": "2.55.4"
+  },
+  "license": "UNLICENSED"
+}

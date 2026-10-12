@@ -1,0 +1,41 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+cache_path = "cache"
+libs = ["node_modules"]
+remappings = [
+  "@red-cup-engineering/signstuff-evm/=../../../../../computer-engineering-services-section/lib/signstuff/signstuff-evm/src/",
+  "ethereum-engineering/=../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/ethereum-engineering-services-section/src/",
+  "cross-chain/=../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/cross-chain-services-section/contracts/",
+  "@account-abstraction/contracts/=node_modules/@account-abstraction/contracts/",
+  "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+  "forge-std/=node_modules/forge-std/src/",
+]
+# Sources of the three sibling packages sit outside this package; solc may read them.
+allow_paths = [
+  "../../../../../computer-engineering-services-section/lib/signstuff/signstuff-evm/src",
+  "../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/ethereum-engineering-services-section/src",
+  "../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/cross-chain-services-section/contracts",
+]
+solc = "0.8.28"
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+# The roadmap pinned shanghai "until signstuff-evm P0.3 closes", but ethereum-engineering's EnterpriseAccount
+# imports OpenZeppelin 5.6.1 SignatureChecker/Bytes, which use mcopy (cancun-only), so the smoke import cannot
+# compile under shanghai. Base, Arbitrum, Gnosis and Chiado all run cancun. See the TP-ENG-001 note.
+evm_version = "cancun"
+fs_permissions = [{ access = "read", path = "test/vectors" }, { access = "read", path = "out" }]
+
+[fuzz]
+runs = 512
+
+[fmt]
+line_length = 100
+tab_width = 4
+bracket_spacing = true
+
+[lint]
+lint_on_build = false

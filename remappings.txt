@@ -1,0 +1,6 @@
+@red-cup-engineering/signstuff-evm/=../../../../../computer-engineering-services-section/lib/signstuff/signstuff-evm/src/
+ethereum-engineering/=../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/ethereum-engineering-services-section/src/
+cross-chain/=../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/cross-chain-services-section/contracts/
+@account-abstraction/contracts/=node_modules/@account-abstraction/contracts/
+@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/
+forge-std/=node_modules/forge-std/src/

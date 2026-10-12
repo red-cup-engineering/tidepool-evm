@@ -1,0 +1,217 @@
+{
+  "schema": "tidepool-evm/tidepool-vocab@1",
+  "source": "js",
+  "generator": "scripts/emit-tidepool-vectors.mjs",
+  "predicates": [
+    {
+      "constant": "ADMITTED_BY",
+      "name": "tidepool:admittedBy",
+      "term": "7374696465706f6f6c3a61646d69747465644279",
+      "id": "0x10ebb9b04986be5cb9124b29e681cd797d3cb78ea9d735fd04a19bfc871c94d2"
+    },
+    {
+      "constant": "MEMBER_KIND",
+      "name": "tidepool:memberKind",
+      "term": "7374696465706f6f6c3a6d656d6265724b696e64",
+      "id": "0x97a78cbefc505d69744ae633b00ce93cb428c1f444aa3be43eb14897b2e34dcd"
+    },
+    {
+      "constant": "AGENT_DISCLOSURE",
+      "name": "tidepool:agentDisclosure",
+      "term": "781874696465706f6f6c3a6167656e74446973636c6f73757265",
+      "id": "0xb3331e7307bca9433b8a7d8af6bdfbe79ca7927ee62784cdb190503adff95428"
+    },
+    {
+      "constant": "RETIRED_AT",
+      "name": "tidepool:retiredAt",
+      "term": "7274696465706f6f6c3a726574697265644174",
+      "id": "0x1184d5e869cf0ca7c53794a0f946acff21d93b81d9e64da52fd877ab303ca816"
+    },
+    {
+      "constant": "SPONSORED_BY",
+      "name": "tidepool:sponsoredBy",
+      "term": "7474696465706f6f6c3a73706f6e736f7265644279",
+      "id": "0xcec161650a93ac9549e57fdaef28b7efbc572de52a485cb8c8d969c5b39bff40"
+    },
+    {
+      "constant": "YIELD_ROUTED",
+      "name": "tidepool:yieldRouted",
+      "term": "7474696465706f6f6c3a7969656c64526f75746564",
+      "id": "0x1025ce9bbf77cf32bb4c876575a53f2b7f2a7110ce3f6f7deff8cfbfd3962621"
+    },
+    {
+      "constant": "BARRIER_DECLARED",
+      "name": "tidepool:barrierDeclared",
+      "term": "781874696465706f6f6c3a626172726965724465636c61726564",
+      "id": "0xdebe637d916cd242deef14f1f16229083e922d0ddd9ff4a35a9ab26133a380d9"
+    },
+    {
+      "constant": "STAGE_DECLARED",
+      "name": "tidepool:stageDeclared",
+      "term": "7674696465706f6f6c3a73746167654465636c61726564",
+      "id": "0xe7f2919cf2f208405df94dad208ab9460221f3fd4241b58a81ca73ef4e92775c"
+    },
+    {
+      "constant": "OBLIGATION_DUE",
+      "name": "tidepool:obligationDue",
+      "term": "7674696465706f6f6c3a6f626c69676174696f6e447565",
+      "id": "0x70a87c96be638dff4fa3e06969b0115c85e55742d970dee7ef1b7e53d3a217de"
+    },
+    {
+      "constant": "OBLIGATION_SETTLED",
+      "name": "tidepool:obligationSettled",
+      "term": "781a74696465706f6f6c3a6f626c69676174696f6e536574746c6564",
+      "id": "0x2e06f96a90e0ef5a996ce7199845ea4ba34a052350204a10fbc4ab2794e98bd7"
+    },
+    {
+      "constant": "CONTESTED_BY",
+      "name": "tidepool:contestedBy",
+      "term": "7474696465706f6f6c3a636f6e7465737465644279",
+      "id": "0xdbe9caf940aae9798c57a1557612555cacbdb8c1a92a2fd45be4e3a819dccecd"
+    },
+    {
+      "constant": "RELEASED_TO",
+      "name": "tidepool:releasedTo",
+      "term": "7374696465706f6f6c3a72656c6561736564546f",
+      "id": "0xd690dedf265e2622acb7558f452fc474aabe4c364ecb35c1b6028f1c7323aaf7"
+    },
+    {
+      "constant": "DRAW_SETTLED_BY",
+      "name": "tidepool:drawSettledBy",
+      "term": "7674696465706f6f6c3a64726177536574746c65644279",
+      "id": "0x2aa2aafc9d5573090190baae30cdfe99b0a5a18b669ea7978e6679ef93bbcd08"
+    },
+    {
+      "constant": "OVERDUE_AT",
+      "name": "tidepool:overdueAt",
+      "term": "7274696465706f6f6c3a6f7665726475654174",
+      "id": "0xc7d8f0f1cf96f145bd305be834a1363d52931c299ff2c20463e499dbdaec95fd"
+    },
+    {
+      "constant": "LATE_SETTLED_AT",
+      "name": "tidepool:lateSettledAt",
+      "term": "7674696465706f6f6c3a6c617465536574746c65644174",
+      "id": "0xcc6e29c2fef2a0f8a05e7cb1bac5f1422633aa1136c7a80fdbc23544409b9673"
+    },
+    {
+      "constant": "VOIDED_AT",
+      "name": "tidepool:voidedAt",
+      "term": "7174696465706f6f6c3a766f696465644174",
+      "id": "0x34f6f2db032773784e8cdf22a6777fafa12e6b70b49c847f30f2d8ee871f7891"
+    },
+    {
+      "constant": "FX_RESIDUE",
+      "name": "tidepool:fxResidue",
+      "term": "7274696465706f6f6c3a667852657369647565",
+      "id": "0x99f26d1967a882b1c84195488bdd5d6e8a29c9b0707990dd99dd74d87ea8b2aa"
+    },
+    {
+      "constant": "CYCLE_TOTAL",
+      "name": "tidepool:cycleTotal",
+      "term": "7374696465706f6f6c3a6379636c65546f74616c",
+      "id": "0x28db51842e4a0c22e58b18e28c455ab9a3c5096834552153fa43e7b614bb9e38"
+    },
+    {
+      "constant": "BUCKET",
+      "name": "tidepool:bucket",
+      "term": "6f74696465706f6f6c3a6275636b6574",
+      "id": "0x0c7c51529e7de3c828378ed08a27ca57b78866c9ff6020de99ff77c2df8acd02"
+    },
+    {
+      "constant": "SECTION_DIGEST",
+      "name": "tidepool:sectionDigest",
+      "term": "7674696465706f6f6c3a73656374696f6e446967657374",
+      "id": "0x61c990d1eacd05cc87db506d2777e560cd174955b3e9c6c294320ad3fb607fc6"
+    },
+    {
+      "constant": "HEAD_OF",
+      "name": "tidepool:headOf",
+      "term": "6f74696465706f6f6c3a686561644f66",
+      "id": "0xfda4b6eff4e087c541469e607b6141ac6d038c42a5fbb95bad53ea1d4dd365a3"
+    },
+    {
+      "constant": "H1_RANK",
+      "name": "tidepool:h1Rank",
+      "term": "6f74696465706f6f6c3a683152616e6b",
+      "id": "0x9ad9a4e35559eef60778f02a160bf7524cb5945cf158b8346e5180d3f35a90ad"
+    },
+    {
+      "constant": "QUESTION_OPENED",
+      "name": "tidepool:questionOpened",
+      "term": "7774696465706f6f6c3a7175657374696f6e4f70656e6564",
+      "id": "0xca853d31f89f47e1f0b495ab03e43a0f92e4eebb2a8a57cbdb09aefe7d4c6d0b"
+    },
+    {
+      "constant": "ASSENTED_TO",
+      "name": "tidepool:assentedTo",
+      "term": "7374696465706f6f6c3a617373656e746564546f",
+      "id": "0x08dbc452381bb5b8237a9fa755a8cc1e9a8649420e7f289fdc5e6f9cd253a65d"
+    },
+    {
+      "constant": "OBJECTED_TO",
+      "name": "tidepool:objectedTo",
+      "term": "7374696465706f6f6c3a6f626a6563746564546f",
+      "id": "0x2affab62060b62e4839c1180f1d1fae90284bc88d5c7298a9d64be97e500ccbc"
+    },
+    {
+      "constant": "WITHDREW_FROM",
+      "name": "tidepool:withdrewFrom",
+      "term": "7574696465706f6f6c3a776974686472657746726f6d",
+      "id": "0x0e10e9b14d4f7b0785acdfd4d901d85dd43b4fc29dcf155c37c77723e75d6e92"
+    },
+    {
+      "constant": "REJOINED",
+      "name": "tidepool:rejoined",
+      "term": "7174696465706f6f6c3a72656a6f696e6564",
+      "id": "0x31f58fba9a628bfde83c959240d9115dab094419ffe8c7485256a91bc95bde0a"
+    },
+    {
+      "constant": "QUIESCED",
+      "name": "tidepool:quiesced",
+      "term": "7174696465706f6f6c3a7175696573636564",
+      "id": "0x4c7811c4f364f38058906ce5f2324cd78ddb6793e055acd4ff902a91efa6f5fa"
+    },
+    {
+      "constant": "EXECUTED",
+      "name": "tidepool:executed",
+      "term": "7174696465706f6f6c3a6578656375746564",
+      "id": "0x786755341c1cdf84254d467ce3cb262f69869b3a1ee0ad480c199547f4841272"
+    },
+    {
+      "constant": "OWED_TO",
+      "name": "tidepool:owedTo",
+      "term": "6f74696465706f6f6c3a6f776564546f",
+      "id": "0x24daeb183e17a644230c459296746e3c607c7d4ba046b031f0917315ace3dddd"
+    },
+    {
+      "constant": "ADMITTED_OWED",
+      "name": "tidepool:admittedOwed",
+      "term": "7574696465706f6f6c3a61646d69747465644f776564",
+      "id": "0x07ef07347610da5959ee3da9b061814cfa32c4d0b441a514b0f4ea75db3baa1c"
+    },
+    {
+      "constant": "CLEARED",
+      "name": "tidepool:cleared",
+      "term": "7074696465706f6f6c3a636c6561726564",
+      "id": "0xf8c3322173aa10ecec8484b14c00340d853313293d48f2d9b8ae183fa466a436"
+    },
+    {
+      "constant": "CLAIMED_RESEED",
+      "name": "tidepool:claimedReseed",
+      "term": "7674696465706f6f6c3a636c61696d6564526573656564",
+      "id": "0x6e447c479dbed0ef613b4a699de45b9832f2c889117afc58fec3e663485e02f2"
+    },
+    {
+      "constant": "RESEEDED",
+      "name": "tidepool:reseeded",
+      "term": "7174696465706f6f6c3a7265736565646564",
+      "id": "0xa0f2fca0cdbbaaf7f6d6400f41b6679174f06c39eef1003831c0cb8017e8ac9c"
+    },
+    {
+      "constant": "SETTLED_BY",
+      "name": "tidepool:settledBy",
+      "term": "7274696465706f6f6c3a736574746c65644279",
+      "id": "0xc9de592db0ea39e0d398c3fb229a2f6abdde49ebb148add26e240352b9926bd5"
+    }
+  ]
+}

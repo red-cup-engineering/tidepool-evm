@@ -1,0 +1,96 @@
+{
+  "schema": "tidepool-evm/hive-release-payload@1",
+  "source": "js",
+  "generator": "scripts/emit-tidepool-vectors.mjs",
+  "note": "Synthetic fixture: no Hive transaction by these ids exists. payloadNi is the 32-byte cell id the op tells (its ni: name is `ni`).",
+  "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+  "poolAccount": "tidepool-pool",
+  "memberAddress": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "memberHiveAccount": "alice",
+  "drawId": "0xe7a3061e6b6ae57328e48ab8858f4beec871b60082dba5bf737814667c718cf6",
+  "amountUsdE6": "250000000",
+  "hbdAmountE3": "250000",
+  "memos": {
+    "release": "tidepool:879bc55e:draw:e7a3061e6b6ae57328e48ab8858f4beec871b60082dba5bf737814667c718cf6",
+    "repayment": "tidepool:879bc55e:settle:e7a3061e6b6ae57328e48ab8858f4beec871b60082dba5bf737814667c718cf6"
+  },
+  "srcSite": "hive:beeab0de00000000000000000000000000000000",
+  "srcSiteId": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+  "release": {
+    "predicate": "tidepool:releasedTo",
+    "side": "for",
+    "money": true,
+    "subject": "5820e7a3061e6b6ae57328e48ab8858f4beec871b60082dba5bf737814667c718cf6",
+    "predicateTerm": "7374696465706f6f6c3a72656c6561736564546f",
+    "object": "78316d656d6265723a307866333966643665353161616438386636663463653661623838323732373963666666623932323636",
+    "cellId": "18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+    "ni": "ni:///sha-256;GJCc0gH1PorAPLPok1UZxzSe3F5JcUurv27wzIsVUIs",
+    "witness": "hive:tidepool-pool",
+    "witnessCbor": "72686976653a74696465706f6f6c2d706f6f6c",
+    "witnessId": "03cc45c7c69395b44ac330d92e150e58d6b745f49cb679171aacf7ca671474e0",
+    "op": {
+      "id": "tidepool",
+      "required_auths": [
+        "tidepool-pool"
+      ],
+      "required_posting_auths": [],
+      "json": "{\"v\":1,\"p\":\"879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965\",\"c\":\"18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b\",\"s\":\"for\",\"w\":\"tidepool-pool\",\"t\":[\"WCDnowYea2rlcyjkiriFj0vuyHG2AILbpb9zeBRmfHGM9g==\",\"c3RpZGVwb29sOnJlbGVhc2VkVG8=\",\"eDFtZW1iZXI6MHhmMzlmZDZlNTFhYWQ4OGY2ZjRjZTZhYjg4MjcyNzljZmZmYjkyMjY2\"]}"
+    },
+    "envelope": {
+      "dstChainId": "84532",
+      "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+      "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+      "blockNum": "94000001",
+      "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+      "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+      "opIndex": 0,
+      "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+      "nonce": "1"
+    }
+  },
+  "repayment": {
+    "predicate": "tidepool:drawSettledBy",
+    "side": "for",
+    "money": true,
+    "subject": "5820e7a3061e6b6ae57328e48ab8858f4beec871b60082dba5bf737814667c718cf6",
+    "predicateTerm": "7674696465706f6f6c3a64726177536574746c65644279",
+    "object": "78316d656d6265723a307866333966643665353161616438386636663463653661623838323732373963666666623932323636",
+    "cellId": "dbbc2a3b45631877a4bc80138aa00d973724afe39deabc69fdb0f885501b561a",
+    "ni": "ni:///sha-256;27wqO0VjGHekvIATiqANlzckr-Od6rxp_bD4hVAbVho",
+    "witness": "hive:alice",
+    "witnessCbor": "6a686976653a616c696365",
+    "witnessId": "069148ea0d94e697fd834fe7025e73c61c499617c75e949437130a3cc5532765",
+    "op": {
+      "id": "tidepool",
+      "required_auths": [
+        "alice"
+      ],
+      "required_posting_auths": [],
+      "json": "{\"v\":1,\"p\":\"879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965\",\"c\":\"dbbc2a3b45631877a4bc80138aa00d973724afe39deabc69fdb0f885501b561a\",\"s\":\"for\",\"w\":\"alice\",\"t\":[\"WCDnowYea2rlcyjkiriFj0vuyHG2AILbpb9zeBRmfHGM9g==\",\"dnRpZGVwb29sOmRyYXdTZXR0bGVkQnk=\",\"eDFtZW1iZXI6MHhmMzlmZDZlNTFhYWQ4OGY2ZjRjZTZhYjg4MjcyNzljZmZmYjkyMjY2\"]}"
+    },
+    "envelope": {
+      "dstChainId": "84532",
+      "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+      "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+      "blockNum": "94000912",
+      "blockId": "0xd4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4000000000000000000000000",
+      "trxId": "0xb2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2000000000000000000000000",
+      "opIndex": 2,
+      "payloadNi": "0xdbbc2a3b45631877a4bc80138aa00d973724afe39deabc69fdb0f885501b561a",
+      "nonce": "2"
+    }
+  },
+  "section": {
+    "cells": [
+      "18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+      "dbbc2a3b45631877a4bc80138aa00d973724afe39deabc69fdb0f885501b561a"
+    ],
+    "values": [
+      1,
+      1
+    ],
+    "digest": "b004429a7abf675dee881b89052f0fb594bea8224d6c22c17fa3bf736016ce77"
+  }
+}

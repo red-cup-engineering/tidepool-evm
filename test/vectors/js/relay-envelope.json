@@ -1,0 +1,156 @@
+{
+  "schema": "tidepool-evm/relay-envelope@1",
+  "source": "js",
+  "generator": "scripts/emit-tidepool-vectors.mjs",
+  "note": "EIP-712 digest and signatures over the Envelope of RelayEnvelopeLib. The relayer is anvil's public default account 0.",
+  "relayer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "chainId": 84532,
+  "dstContract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "typeString": "Envelope(uint256 dstChainId,address dstContract,bytes32 poolId,bytes32 srcSite,uint64 blockNum,bytes32 blockId,bytes32 trxId,uint32 opIndex,bytes32 payloadNi,uint64 nonce)",
+  "cases": [
+    {
+      "label": "valid release envelope",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+        "nonce": "1"
+      },
+      "digest": "0x587e5ff17f4140062c6eb33498a5294496996059a90a3537762b04564a6f2805",
+      "signature": "0x89811545ce08eaa4d63f65bf98f42c02ab6bfa2a0dbf0ad6dfbf30246ffffd00230cfe37648b63367b7d8814c37ee5cde78d34039842131455bf5f1d50f374601b",
+      "expect": "ok"
+    },
+    {
+      "label": "valid repayment envelope",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000912",
+        "blockId": "0xd4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4000000000000000000000000",
+        "trxId": "0xb2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2000000000000000000000000",
+        "opIndex": 2,
+        "payloadNi": "0xdbbc2a3b45631877a4bc80138aa00d973724afe39deabc69fdb0f885501b561a",
+        "nonce": "2"
+      },
+      "digest": "0xe45480b8620e9a166310ff3c008677a41aad3487c571f88d2f087c2582433554",
+      "signature": "0x96bb24cbcc486328bc72ad7454a800cc65c6fbb9b54b1ce58bd82229cb289c2f7e70e5bb8ab99da392b9d58ae29ae020ea19f5a75a5825b45083c59f3eddff6b1b",
+      "expect": "ok"
+    },
+    {
+      "label": "zero and maximal fields",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "srcSite": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "blockNum": "18446744073709551615",
+        "blockId": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "trxId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "opIndex": 4294967295,
+        "payloadNi": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "nonce": "18446744073709551615"
+      },
+      "digest": "0xc5f9bbd4bc15796b555627d50f7ef6d14344183d4dbfdda6c465c1fe025ed81e",
+      "signature": "0x2959778bf4a03adcf3d4fc82707636ed22547e38ee263190b216c65502c9dc285c7c6e5909b4088009bb96153f0e77e763f0c0534f4f5f911d545bda0ef6bfe41b",
+      "expect": "ok"
+    },
+    {
+      "label": "wrong chain",
+      "envelope": {
+        "dstChainId": "1",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+        "nonce": "1"
+      },
+      "digest": "0x879997a4fb593a2fdb02e803f578eabda298167c6902a9dd95b64a9b72e01cd6",
+      "signature": "0x4486ee614f26cbcab23cf5eaafc9ccc657f358eab0e9e10922146cd6ab19bc6964414f1382dbf142b8c4f435631e08af8f020b246ded55a985249043f3f4170d1b",
+      "expect": "WrongDestination"
+    },
+    {
+      "label": "wrong contract",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0xabcdef0000000000000000000000000000000001",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+        "nonce": "1"
+      },
+      "digest": "0x1949c41c20542d68c92abe7e4e305bc7d6166bdb5d651de6999280bf5c449949",
+      "signature": "0x98c115c87aac82aff3dd662cd5405233431133a821be90eab64385af25a36d3725011036e7c1480ed48f9bdea65f61ac6b9edc5b996d4b3ebf28886648c74fd71c",
+      "expect": "WrongDestination"
+    },
+    {
+      "label": "tampered nonce",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+        "nonce": "99"
+      },
+      "digest": "0x5648e534222822209e33aab87db39ec2e0142d948fab5f44644b5220009ec429",
+      "signature": "0x89811545ce08eaa4d63f65bf98f42c02ab6bfa2a0dbf0ad6dfbf30246ffffd00230cfe37648b63367b7d8814c37ee5cde78d34039842131455bf5f1d50f374601b",
+      "expect": "BadRelayerSignature"
+    },
+    {
+      "label": "tampered payload",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "nonce": "1"
+      },
+      "digest": "0x2bc22a50acb8f0c53fed5da78e23d4d58d74377defc01a4e1a1556638cc6ae36",
+      "signature": "0x89811545ce08eaa4d63f65bf98f42c02ab6bfa2a0dbf0ad6dfbf30246ffffd00230cfe37648b63367b7d8814c37ee5cde78d34039842131455bf5f1d50f374601b",
+      "expect": "BadRelayerSignature"
+    },
+    {
+      "label": "signed by a stranger",
+      "envelope": {
+        "dstChainId": "84532",
+        "dstContract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "poolId": "0x879bc55edf17804218a7d81c91c3d6408849a7b615dd969c2f76e1d6c87e9965",
+        "srcSite": "0xae959f855a4860dc0e862bc7f629c0770be04f496d638d2ae1e4f15681e2a498",
+        "blockNum": "94000001",
+        "blockId": "0xc3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3000000000000000000000000",
+        "trxId": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1000000000000000000000000",
+        "opIndex": 0,
+        "payloadNi": "0x18909cd201f53e8ac03cb3e8935519c7349edc5e49714babbf6ef0cc8b15508b",
+        "nonce": "1"
+      },
+      "digest": "0x587e5ff17f4140062c6eb33498a5294496996059a90a3537762b04564a6f2805",
+      "signature": "0x0a366d1b54ab3cd4aeea0d2398d4c67e31d3b3c2f4d7e5228b8c62468e3fa21636a6f10810946a37e48cf19095583aff37560259438c033549d3a8518158f1f51c",
+      "expect": "BadRelayerSignature"
+    }
+  ]
+}
