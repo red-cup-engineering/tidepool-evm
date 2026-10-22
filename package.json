@@ -36,9 +36,13 @@
     "forge-std": "github:foundry-rs/forge-std#v1.10.0",
     "viem": "2.55.4"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/tidepool-evm.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
   }
 }
