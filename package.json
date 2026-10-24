@@ -27,7 +27,7 @@
   "dependencies": {
     "@red-cup-engineering/signstuff-evm": "workspace:*",
     "@red-cup-engineering/ethereum-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/cross-chain-services-section": "workspace:*"
+    "@red-cup-engineering/cross-chain-engineering-services-section": "workspace:*"
   },
   "devDependencies": {
     "@account-abstraction/contracts": "0.8.0",
