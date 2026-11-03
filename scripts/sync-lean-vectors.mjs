@@ -21,7 +21,7 @@ const SRC = process.env.LEAN_VECTORS_DIR
   : resolve(
       pkg,
       "../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/" +
-        "computer-proofing-system-services-section/services/lean-system-services-section/lib/obsmetrologia-conformance/vectors",
+        "computer-proofing-systems-engineering-services-section/services/lean-system-services-section/lib/obsmetrologia-conformance/vectors",
     );
 const DEST = join(pkg, "test/vectors/lean");
 const check = process.argv.includes("--check");
