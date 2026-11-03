@@ -5,7 +5,7 @@
 //   node scripts/sync-lean-vectors.mjs           # copy
 //   node scripts/sync-lean-vectors.mjs --check   # verify
 //
-// Source: lean-system-services-section/lib/obsmetrologia-conformance/vectors (override with LEAN_VECTORS_DIR).
+// Source: lean-engineering-services-section/lib/obsmetrologia-conformance/vectors (override with LEAN_VECTORS_DIR).
 // Groups: four, record, valued (the FOUR carriers signstuff-evm judges), pool (PoolSplitLib, TP-EVM-003). The groups
 // tally, barrier, withdrawal, meetpay, sleeve and desk are added by the tasks that realize them (TP-ENG-004's
 // vectors-check covers all ten).
@@ -21,7 +21,7 @@ const SRC = process.env.LEAN_VECTORS_DIR
   : resolve(
       pkg,
       "../../../../../computer-engineering-services-section/services/computer-systems-engineering-services-section/services/" +
-        "computer-proofing-systems-engineering-services-section/services/lean-system-services-section/lib/obsmetrologia-conformance/vectors",
+        "computer-proofing-systems-engineering-services-section/services/lean-engineering-services-section/lib/obsmetrologia-conformance/vectors",
     );
 const DEST = join(pkg, "test/vectors/lean");
 const check = process.argv.includes("--check");
